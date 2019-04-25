@@ -1,0 +1,19 @@
+// Base
+
+@import 'base/mixins';
+@import 'base/variables';
+
+// Components
+
+@import 'components/defaults';
+@import 'components/flex';
+@import 'components/sections';
+@import 'components/typography';
+
+// Media Queries
+
+@media screen and (max-width: 650px) {
+	.inner-container {
+		transform: scale(0.7);
+	}
+}

@@ -1,0 +1,161 @@
+// Sections
+
+#root {
+	height: 100vh;
+
+	.inner-container {
+		outline: 5px solid orange;
+		position: relative;
+		width: 660px;
+		text-align: center;
+		background-color: lighten(grey, 20%);
+
+		.pad-bank {
+			width: $padWidth * 3 + 32;
+			height: $padHeight * 3 + 32;
+			display: inline-block;
+			margin: 20px;
+
+			.drum-pad {
+				position: relative;
+				float: left;
+				width: $padWidth;
+				height: $padHeight;
+				margin-right: 10px;
+				border-radius: 5px;
+				padding-top: 35px;
+				box-sizing: border-box;
+				cursor: pointer;
+			}
+		}
+
+		.logo {
+			position: absolute;
+			top: 5px;
+			right: 10px;
+
+			.inner-logo {
+				display: inline-block;
+			}
+		}
+
+		.controls-container {
+			width: 240px;
+			height: $padHeight * 3 + 32;
+			display: inline-block;
+			margin: 40px 20px 0 10px;
+			vertical-align: top;
+
+			.control {
+				width: 100px;
+				margin: auto;
+
+				p {
+					margin-bottom: 0;
+				}
+
+				.select {
+					margin: auto;
+					border: 1px solid black;
+					width: 50px;
+					height: 20px;
+					padding: 1px;
+					background-color: black;
+
+					.inner {
+						width: 23px;
+						height: 19px;
+						background: blue;
+						border: 1px solid black;
+						box-sizing: border-box;
+						cursor: pointer;
+					}
+				}
+			}
+
+			#display {
+				width: 200px;
+				background-color: gray;
+				margin: 15px auto;
+				padding: 15px;
+				box-sizing: border-box;
+			}
+		}
+	}
+}
+
+// CUSTOM RANGE INPUT : Credit : https://github.com/darlanrod/input-range-scss/blob/master/_inputrange.scss
+
+[type = range] {
+	-webkit-appearance: none;
+	margin: $thumb-height / 2 0;
+	width: $track-width;
+
+	&:focus {
+		outline: none;
+	}
+
+	&::-webkit-slider-runnable-track {
+		@include track();
+		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+		background: $track-color;
+		border: $track-border-width solid $track-border-color;
+		border-radius: $track-radius;
+	}
+
+	&::-webkit-slider-thumb {
+		@include thumb();
+		-webkit-appearance: none;
+		margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+	}
+
+	&:focus::-webkit-slider-runnable-track {
+		background: lighten($track-color, $contrast);
+	}
+
+	&::-moz-range-track {
+		@include track();
+		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+		background: $track-color;
+		border: $track-border-width solid $track-border-color;
+		border-radius: $track-radius;
+	}
+
+	&::-moz-range-thumb {
+		@include thumb();
+	}
+
+	&::-ms-track {
+		@include track();
+		background: transparent;
+		border-color: transparent;
+		border-width: $thumb-width 0;
+		color: transparent;
+	}
+
+	&::-ms-fill-lower {
+		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+		background: darken($track-color, $contrast);
+		border: $track-border-width solid $track-border-color;
+		border-radius: $track-radius * 2;
+	}
+
+	&::-ms-fill-upper {
+		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+		background: $track-color;
+		border: $track-border-width solid $track-border-color;
+		border-radius: $track-radius * 2;
+	}
+
+	&::-ms-thumb {
+		@include thumb();
+	}
+
+	&:focus::-ms-fill-lower {
+		background: $track-color;
+	}
+
+	&:focus::-ms-fill-upper {
+		background: lighten($track-color, $contrast);
+	}
+}

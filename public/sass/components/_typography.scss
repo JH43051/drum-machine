@@ -1,0 +1,22 @@
+// Typography
+
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+body {
+	font-family: Russo One;
+
+	#root {
+
+		.inner-container {
+
+			.logo {
+
+				.inner-logo {
+					font-style: italic;
+        			font-weight: bold;
+        			font-size: 20px;
+				}
+			}
+		}
+	}
+}
