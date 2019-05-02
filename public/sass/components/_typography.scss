@@ -1,9 +1,9 @@
 // Typography
 
-@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Gugi|VT323');
 
 body {
-	font-family: Russo One;
+	font-family: Gugi, cursive;
 
 	#root {
 
@@ -15,6 +15,14 @@ body {
 					font-style: italic;
         			font-weight: bold;
         			font-size: 20px;
+				}
+			}
+
+			.controls-container {
+
+				#display {
+					font-family: VT323;
+					font-size: 1.4em;
 				}
 			}
 		}

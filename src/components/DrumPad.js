@@ -8,9 +8,10 @@ const activeStyle = {
 }
 
 const inactiveStyle = {
-  backgroundColor: 'grey',
+  backgroundColor: '#1bb2dd',
   marginTop: 10,
-  boxShadow: "3px 3px 5px black"
+  border: "2px solid black",
+  boxShadow: "1px 1px 3px #1bb2dd"
 }
 
 class DrumPad extends React.Component {
