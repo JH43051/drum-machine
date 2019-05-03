@@ -15,14 +15,23 @@ body {
 					font-style: italic;
         			font-weight: bold;
         			font-size: 20px;
+					color: #1bb2dd;
 				}
 			}
 
 			.controls-container {
 
+				.control {
+					
+					p {
+						color: #1bb2dd;
+					}
+				}
+
 				#display {
 					font-family: VT323;
 					font-size: 1.4em;
+					color: orange;
 				}
 			}
 		}

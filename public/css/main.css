@@ -27,7 +27,7 @@ body #root {
       width: 332px;
       height: 272px;
       display: inline-block;
-      margin: 20px;
+      margin: 60px 20px 20px 20px;
       filter: none; }
       #root .inner-container .pad-bank .drum-pad {
         position: relative;
@@ -36,9 +36,13 @@ body #root {
         height: 80px;
         margin-right: 10px;
         border-radius: 5px;
-        padding-top: 35px;
+        padding-top: 10px;
+        padding-right: 60px;
         box-sizing: border-box;
-        cursor: pointer; }
+        cursor: pointer;
+        color: #1bb2dd; }
+        #root .inner-container .pad-bank .drum-pad:hover {
+          color: orange; }
     #root .inner-container .logo {
       position: absolute;
       top: 5px;
@@ -49,7 +53,7 @@ body #root {
       width: 240px;
       height: 272px;
       display: inline-block;
-      margin: 40px 20px 0 10px;
+      margin: 90px 20px 0 10px;
       vertical-align: top; }
       #root .inner-container .controls-container .control {
         width: 100px;
@@ -58,21 +62,36 @@ body #root {
           margin-bottom: 0; }
         #root .inner-container .controls-container .control .select {
           margin: auto;
-          border: 1px solid black;
+          border: 2px solid #242629;
           width: 50px;
           height: 20px;
           padding: 1px;
-          background-color: black; }
+          background-color: black;
+          border-radius: 20px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
           #root .inner-container .controls-container .control .select .inner {
-            width: 23px;
-            height: 19px;
-            background: blue;
+            width: 20px;
+            height: 20px;
+            background: grey;
             border: 1px solid black;
             box-sizing: border-box;
-            cursor: pointer; }
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out; }
+        #root .inner-container .controls-container .control #indicator {
+          float: right;
+          margin-top: 5px;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          background-color: #69e900;
+          transition: opacity .4s ease-in .1s;
+          border: 2px solid #242629;
+          box-shadow: 0px 0px 3px #69e900; }
       #root .inner-container .controls-container #display {
         width: 200px;
-        background-color: #343434;
+        background-color: #000000;
         margin: 15px auto;
         padding: 15px;
         border: 2px solid #1bb2dd;
@@ -89,24 +108,24 @@ body #root {
   [type='range']:focus {
     outline: 0; }
     [type='range']:focus::-webkit-slider-runnable-track {
-      background: #fbfbfc; }
+      background: #0d0d0d; }
     [type='range']:focus::-ms-fill-lower {
-      background: #eceff1; }
+      background: #000000; }
     [type='range']:focus::-ms-fill-upper {
-      background: #fbfbfc; }
+      background: #0d0d0d; }
   [type='range']::-webkit-slider-runnable-track {
     cursor: default;
     height: 8px;
     transition: all .2s ease;
     width: 100%;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
-    background: #eceff1;
-    border: 2px solid #cfd8dc;
+    background: #000000;
+    border: 2px solid #242629;
     border-radius: 5px; }
   [type='range']::-webkit-slider-thumb {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
-    background: #607d8b;
-    border: 2px solid #eceff1;
+    background: grey;
+    border: 2px solid #000000;
     border-radius: 12px;
     cursor: default;
     height: 24px;
@@ -119,14 +138,14 @@ body #root {
     height: 8px;
     transition: all .2s ease;
     width: 100%;
-    background: #eceff1;
-    border: 2px solid #cfd8dc;
+    background: #000000;
+    border: 2px solid #242629;
     border-radius: 5px;
     height: 4px; }
   [type='range']::-moz-range-thumb {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
-    background: #607d8b;
-    border: 2px solid #eceff1;
+    background: grey;
+    border: 2px solid #000000;
     border-radius: 12px;
     cursor: default;
     height: 20px;
@@ -142,18 +161,18 @@ body #root {
     color: transparent; }
   [type='range']::-ms-fill-lower {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
-    background: #dde3e6;
-    border: 2px solid #cfd8dc;
+    background: black;
+    border: 2px solid #242629;
     border-radius: 10px; }
   [type='range']::-ms-fill-upper {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
-    background: #eceff1;
-    border: 2px solid #cfd8dc;
+    background: #000000;
+    border: 2px solid #242629;
     border-radius: 10px; }
   [type='range']::-ms-thumb {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
-    background: #607d8b;
-    border: 2px solid #eceff1;
+    background: grey;
+    border: 2px solid #000000;
     border-radius: 12px;
     cursor: default;
     height: 20px;
@@ -177,10 +196,14 @@ body {
   body #root .inner-container .logo .inner-logo {
     font-style: italic;
     font-weight: bold;
-    font-size: 20px; }
+    font-size: 20px;
+    color: #1bb2dd; }
+  body #root .inner-container .controls-container .control p {
+    color: #1bb2dd; }
   body #root .inner-container .controls-container #display {
     font-family: VT323;
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    color: orange; }
 
 @media screen and (max-width: 650px) {
   .inner-container {

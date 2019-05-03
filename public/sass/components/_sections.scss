@@ -15,7 +15,7 @@
 			width: $padWidth * 3 + 32;
 			height: $padHeight * 3 + 32;
 			display: inline-block;
-			margin: 20px;
+			margin: 60px 20px 20px 20px;
 			filter: none;
 
 			.drum-pad {
@@ -25,9 +25,15 @@
 				height: $padHeight;
 				margin-right: 10px;
 				border-radius: 5px;
-				padding-top: 35px;
+				padding-top: 10px;
+        padding-right: 60px;
 				box-sizing: border-box;
 				cursor: pointer;
+        color: #1bb2dd;
+
+          &:hover {
+            color: orange;
+          }
 			}
 		}
 
@@ -45,7 +51,7 @@
 			width: 240px;
 			height: $padHeight * 3 + 32;
 			display: inline-block;
-			margin: 40px 20px 0 10px;
+			margin: 90px 20px 0 10px;
 			vertical-align: top;
 
 			.control {
@@ -58,26 +64,43 @@
 
 				.select {
 					margin: auto;
-					border: 1px solid black;
+					border: 2px solid #242629;
 					width: 50px;
 					height: 20px;
 					padding: 1px;
 					background-color: black;
+          border-radius: 20px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
 
 					.inner {
-						width: 23px;
-						height: 19px;
-						background: blue;
+						width: 20px;
+						height: 20px;
+						background: grey;
 						border: 1px solid black;
 						box-sizing: border-box;
 						cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+            transition: transform 0.2s ease-out;
 					}
 				}
+
+        #indicator {
+          float: right;
+          margin-top: 5px;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          background-color: rgb(105, 233, 0);
+          transition: opacity .4s ease-in .1s;
+          border: 2px solid #242629;
+          box-shadow: 0px 0px 3px rgb(105, 233, 0);
+        }
 			}
 
 			#display {
 				width: 200px;
-				background-color: #343434;
+				background-color: #000000;
 				margin: 15px auto;
 				padding: 15px;
 				border: 2px solid #1bb2dd;

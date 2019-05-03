@@ -61,15 +61,20 @@ class App extends React.Component {
     });
   }
   render() {
-    const powerSlider = this.state.power ? {
-      float: 'right'
+    const powerIndicator = this.state.power ? {
+      opacity: '100'
     } : {
-      float: 'left'
+      opacity: '0'
+    };
+    const powerSlider = this.state.power ? {
+      transform: `translate(${30}px)`
+    } : {
+      transform: `translate(${0}px)`
     };
     const bankSlider = this.state.currentPadBank === bankOne ? {
-      float: 'left'
+      transform: `translate(${0}px)`
     } : {
-      float: 'right'
+      transform: `translate(${30}px)`
     }; {
       const clips = [].slice.call(document.getElementsByClassName('clip'));
       clips.forEach(sound => {
@@ -85,7 +90,7 @@ class App extends React.Component {
 					currentPadBank={this.state.currentPadBank} />
         
         <div className="logo">
-            <div className="inner-logo ">{'drumMachine' + String.fromCharCode(160)}</div>
+            <div className="inner-logo ">{'drumMachine V.1.2' + String.fromCharCode(160)}</div>
             <i className="inner-logo fa fa-free-code-camp" />
           </div>
 
@@ -93,8 +98,9 @@ class App extends React.Component {
         
 					<div className="control">
 						<p>Power</p>
+            <div id="indicator" style={powerIndicator} />
 						<div onClick={this.powerControl} className="select">
-							<div style={powerSlider} className="inner" />
+							<div className="inner" style={powerSlider} />
 						</div>
 					</div>
 					<p id="display">
