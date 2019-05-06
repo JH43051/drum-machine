@@ -2,11 +2,11 @@ import React from 'react';
 import DrumPad from './DrumPad';
 
 class PadBank extends React.Component {
-
 	render() {
-		let padBank;
+		let padBank = null;
+
 		this.props.power ?
-			padBank = this.props.currentPadBank.map((drumObj, i, padBankArr) => {
+			padBank = this.props.currentPadBank.map((_drumObj, i, padBankArr) => {
 				return (
 					<DrumPad
 						clipId={padBankArr[i].id}
@@ -17,7 +17,7 @@ class PadBank extends React.Component {
 						power={this.props.power} />
 				)
 			}) :
-			padBank = this.props.currentPadBank.map((drumObj, i, padBankArr) => {
+			padBank = this.props.currentPadBank.map((_drumObj, i, padBankArr) => {
 				return (
 					<DrumPad
 						clipId={padBankArr[i].id}
@@ -28,6 +28,7 @@ class PadBank extends React.Component {
 						power={this.props.power} />
 				)
 			});
+
 		return (
 			<div className="pad-bank" >
 				{padBank}

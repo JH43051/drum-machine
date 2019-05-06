@@ -1,26 +1,26 @@
 // Mixins
 
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
-  box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
+	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
 }
 
 @mixin track {
-  cursor: default;
-  height: $track-height;
-  transition: all .2s ease;
-  width: $track-width;
+	cursor: default;
+	height: $track-height;
+	transition: all .2s ease;
+	width: $track-width;
 }
 
 @mixin thumb($adjustment: 0) {
-  @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
-  background: $thumb-color;
-  border: $thumb-border-width solid $thumb-border-color;
-  border-radius: $thumb-radius;
-  cursor: default;
-  height: $thumb-height + $adjustment;
-  width: $thumb-width + $adjustment;
+	@include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
+	background: $thumb-color;
+	border: $thumb-border-width solid $thumb-border-color;
+	border-radius: $thumb-radius;
+	cursor: default;
+	height: $thumb-height + $adjustment;
+	width: $thumb-width + $adjustment;
 }
 
 @mixin disabled {
-  cursor: not-allowed;
+	cursor: not-allowed;
 }

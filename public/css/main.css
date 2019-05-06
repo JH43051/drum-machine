@@ -21,7 +21,6 @@ body #root {
     border-radius: 10px;
     position: relative;
     width: 660px;
-    text-align: center;
     background-color: #292929; }
     #root .inner-container .pad-bank {
       width: 332px;
@@ -39,10 +38,7 @@ body #root {
         padding-top: 10px;
         padding-right: 60px;
         box-sizing: border-box;
-        cursor: pointer;
-        color: #1bb2dd; }
-        #root .inner-container .pad-bank .drum-pad:hover {
-          color: orange; }
+        cursor: pointer; }
     #root .inner-container .logo {
       position: absolute;
       top: 5px;
@@ -88,9 +84,10 @@ body #root {
           background-color: #69e900;
           transition: opacity .4s ease-in .1s;
           border: 2px solid #242629;
-          box-shadow: 0px 0px 3px #69e900; }
+          box-shadow: 0px 0px 3px rgba(105, 233, 0, 0.3); }
       #root .inner-container .controls-container #display {
         width: 200px;
+        height: 60px;
         background-color: #000000;
         margin: 15px auto;
         padding: 15px;
@@ -193,17 +190,23 @@ body #root {
 
 body {
   font-family: Gugi, cursive; }
-  body #root .inner-container .logo .inner-logo {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 20px;
-    color: #1bb2dd; }
-  body #root .inner-container .controls-container .control p {
-    color: #1bb2dd; }
-  body #root .inner-container .controls-container #display {
-    font-family: VT323;
-    font-size: 1.4em;
-    color: orange; }
+  body #root .inner-container {
+    text-align: center; }
+    body #root .inner-container .pad-bank .drum-pad {
+      color: #1bb2dd; }
+      body #root .inner-container .pad-bank .drum-pad:hover {
+        color: orange; }
+    body #root .inner-container .logo .inner-logo {
+      font-style: italic;
+      font-weight: bold;
+      font-size: 20px;
+      color: #1bb2dd; }
+    body #root .inner-container .controls-container .control p {
+      color: #1bb2dd; }
+    body #root .inner-container .controls-container #display {
+      font-family: VT323;
+      font-size: 1.4em;
+      color: orange; }
 
 @media screen and (max-width: 650px) {
   .inner-container {

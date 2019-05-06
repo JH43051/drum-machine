@@ -8,13 +8,25 @@ body {
 	#root {
 
 		.inner-container {
+			text-align: center;
+
+			.pad-bank {
+
+				.drum-pad {
+					color: #1bb2dd;
+
+					&:hover {
+						color: orange;
+					}
+				}
+			}
 
 			.logo {
 
 				.inner-logo {
 					font-style: italic;
-        			font-weight: bold;
-        			font-size: 20px;
+					font-weight: bold;
+					font-size: 20px;
 					color: #1bb2dd;
 				}
 			}
@@ -22,7 +34,7 @@ body {
 			.controls-container {
 
 				.control {
-					
+
 					p {
 						color: #1bb2dd;
 					}
